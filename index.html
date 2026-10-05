@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>Circuit Lab access proof</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">Circuit Lab · school access proof</p>
+        <h1>3D access test</h1>
+        <p class="lede">This page only checks HTML, JavaScript, WebGL, touch controls and a local GLB file.</p>
+      </div>
+      <div class="build" id="build-id">CL-P1-ACCESS-v0.1</div>
+    </header>
+
+    <section class="card" aria-labelledby="scene-title">
+      <div class="scene-head">
+        <div>
+          <h2 id="scene-title">Interactive WebGL object</h2>
+          <p>Drag with one finger or a mouse to rotate. Reset view returns to the starting angle.</p>
+        </div>
+        <button id="reset-view" type="button">Reset view</button>
+      </div>
+      <div id="canvas-wrap">
+        <canvas id="gl-canvas" aria-label="Rotatable 3D access-test cube"></canvas>
+        <div id="no-script" class="overlay">Loading… If this remains visible, application scripts may not have started.</div>
+      </div>
+    </section>
+
+    <section class="card status-card" aria-labelledby="status-title">
+      <h2 id="status-title">Diagnostics</h2>
+      <div class="status-grid">
+        <div><span>HTML</span><strong id="html-status">OK-PAGE</strong></div>
+        <div><span>JavaScript</span><strong id="script-status">WAIT</strong></div>
+        <div><span>WebGL</span><strong id="webgl-status">WAIT</strong></div>
+        <div><span>Local GLB</span><strong id="model-status">WAIT</strong></div>
+      </div>
+      <p id="detail" role="status" aria-live="polite">Starting checks…</p>
+    </section>
+  </main>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
